@@ -1,0 +1,8 @@
+*.ipynb
+*.log
+.ipynb_checkpoints
+*.pyc
+venv/
+*.vtp
+*.vtk
+*.vtu

@@ -1,0 +1,6 @@
+_build/
+source/generated/
+coverage
+
+*.png
+pymor_defaults.py

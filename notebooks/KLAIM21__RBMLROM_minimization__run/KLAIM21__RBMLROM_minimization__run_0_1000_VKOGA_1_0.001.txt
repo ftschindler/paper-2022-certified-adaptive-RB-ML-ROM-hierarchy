@@ -1,0 +1,1116 @@
+00:00 [1mmain[0m: creating FOM:
+00:02 [1mmain[0m:   discretizing took 2.214212417602539s
+00:02 [1mmain[0m:   grid has 2000 elements, FOM has 2121 DoFs, uses 1000 time steps
+00:02 [1mmain[0m:   input parameter space is 2-dimensional:
+00:02 [1mmain[0m:     ParameterSpace({Da: 1, Pe: 1}, {Da: (0.01, 10), Pe: (9, 11)})
+00:02 [1mmain[0m: converting to pyMOR's builtin numpy/scipy model ...
+00:02 [1mmain[0m: done (took 0.17857122421264648s)
+00:02 [1mmain[0m: computing dual norm of output functional:
+00:02 [1mmain[0m:   0.5965844702960148
+00:02 [1mmain[0m: computing f(mu_ref={Da: [5.005], Pe: [10.0]}) ...
+00:03 [1mmain[0m: average FOM output (solve + apply functional) time: 1.1673626899719238s
+00:03 [1mmain[0m: computing ||f_mu_ref||_{L^2(0, T)}:
+00:03 [1mmain[0m:   0.054881433775099575
+00:05 [1mmain[0m: creating adaptive VKOGA model (for abs_output_tol=0.001) with
+00:05 [1mmain[0m: - abs_output_tol=0.001
+00:05 [1mmain[0m: - abs_state_tol=0.0016762085669173009
+00:05 [1mmain[0m: - pod_l2_tol=1e-15
+00:05 [1mmain[0m: took 0.06575798988342285s
+00:05 [1mNelder-Mead[0m: preparing plot:
+00:47 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 2.  10.5] ...
+00:47 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 0
+00:47 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 0
+00:47 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 0
+00:47 [1mAdaptiveModel[0m: computing output for mu={Da: [2.0], Pe: [10.5]}:
+00:47 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+00:47 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.0], Pe: [10.5]} ...
+00:47 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (5.4676819357346025) above tolerance, discarding MLM output!
+00:47 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+00:48 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   ROM solution not accurate enough for training (9.16497530185731)!
+00:48 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (5.4676819357346025) above tolerance, discarding ROM output!
+00:48 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing FOM output (+live solution HAPOD):
+00:51 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   extending ROM ...
+00:52 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   solving ROM for MLM training ...
+00:52 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.0], Pe: [10.5]}
+00:52 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+00:52 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 1 samples ...
+00:52 |   [1mAdaptiveModel[0m: returning FOM output!
+00:52 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.011651561563703016
+00:54 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 2.1 10.5] ...
+00:54 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 1
+00:54 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 0
+00:54 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 0
+00:54 [1mAdaptiveModel[0m: computing output for mu={Da: [2.1], Pe: [10.5]}:
+00:54 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+00:54 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.1], Pe: [10.5]} ...
+00:54 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.016509400425553704) above tolerance, discarding MLM output!
+00:54 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+00:55 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   ROM solution not accurate enough for training (0.011454269905923298)!
+00:55 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.006833439544452834) above tolerance, discarding ROM output!
+00:55 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing FOM output (+live solution HAPOD):
+00:58 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   extending ROM ...
+01:03 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   prolonging MLM training data ...
+01:03 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   solving ROM for MLM training ...
+01:04 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.1], Pe: [10.5]}
+01:04 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+01:04 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 2 samples ...
+01:04 |   [1mAdaptiveModel[0m: returning FOM output!
+01:04 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.01130722488450624
+01:05 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 2. 11.] ...
+01:05 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 2
+01:05 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 0
+01:05 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 0
+01:05 [1mAdaptiveModel[0m: computing output for mu={Da: [2.0], Pe: [11.0]}:
+01:05 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+01:05 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.0], Pe: [11.0]} ...
+01:05 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (3.5000198577858312) above tolerance, discarding MLM output!
+01:05 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+01:05 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   ROM solution not accurate enough for training (0.03138003605035911)!
+01:05 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.01872084218497334) above tolerance, discarding ROM output!
+01:06 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing FOM output (+live solution HAPOD):
+01:09 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   extending ROM ...
+01:21 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   prolonging MLM training data ...
+01:21 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   solving ROM for MLM training ...
+01:22 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.0], Pe: [11.0]}
+01:22 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+01:22 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 3 samples ...
+01:22 |   [1mAdaptiveModel[0m: returning FOM output!
+01:22 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.01652437934497879
+01:22 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 2.1 10. ] ...
+01:22 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 3
+01:22 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 0
+01:22 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 0
+01:22 [1mAdaptiveModel[0m: computing output for mu={Da: [2.0999999999999996], Pe: [10.0]}:
+01:22 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+01:22 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.0999999999999996], Pe: [10.0]} ...
+01:22 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (3.881080323275954) above tolerance, discarding MLM output!
+01:22 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+01:23 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.0999999999999996], Pe: [10.0]}
+01:23 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+01:23 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 4 samples ...
+01:23 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 0.0003313904880223683)
+01:23 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.006690241356425059
+01:24 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.15 9.5 ] ...
+01:24 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 3
+01:24 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 1
+01:24 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 0
+01:24 [1mAdaptiveModel[0m: computing output for mu={Da: [2.1499999999999995], Pe: [9.5]}:
+01:24 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+01:24 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.1499999999999995], Pe: [9.5]} ...
+01:24 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (3.6480683189588343) above tolerance, discarding MLM output!
+01:24 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+01:25 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.1499999999999995], Pe: [9.5]}
+01:25 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+01:25 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 5 samples ...
+01:25 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 0.000996508367333252)
+01:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.002185062818862115
+01:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.25 9.5 ] ...
+01:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 3
+01:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 2
+01:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 0
+01:25 [1mAdaptiveModel[0m: computing output for mu={Da: [2.25], Pe: [9.5]}:
+01:25 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+01:25 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.25], Pe: [9.5]} ...
+01:25 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.01488502212233104) above tolerance, discarding MLM output!
+01:25 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+01:26 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.25], Pe: [9.5]}
+01:26 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+01:26 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 6 samples ...
+01:26 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 0.0009764584121076574)
+01:26 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0021314091051784986
+01:27 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.375 9.   ] ...
+01:27 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 3
+01:27 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 3
+01:27 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 0
+01:27 [1mAdaptiveModel[0m: computing output for mu={Da: [2.375], Pe: [9.0]}:
+01:27 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+01:27 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.375], Pe: [9.0]} ...
+01:27 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (3.6801725553502367) above tolerance, discarding MLM output!
+01:27 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+01:28 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   ROM solution not accurate enough for training (0.003258283397259271)!
+01:28 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.0019438412746282216) above tolerance, discarding ROM output!
+01:28 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing FOM output (+live solution HAPOD):
+01:31 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   extending ROM ...
+01:52 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   prolonging MLM training data ...
+01:52 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   solving ROM for MLM training ...
+01:53 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.375], Pe: [9.0]}
+01:53 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+01:53 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 7 samples ...
+01:53 |   [1mAdaptiveModel[0m: returning FOM output!
+01:53 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0058286062446333935
+01:54 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.3 9. ] ...
+01:54 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+01:54 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 3
+01:54 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 0
+01:54 [1mAdaptiveModel[0m: computing output for mu={Da: [2.2999999999999994], Pe: [9.0]}:
+01:54 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+01:54 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.2999999999999994], Pe: [9.0]} ...
+01:54 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.006413288730331046) above tolerance, discarding MLM output!
+01:54 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+01:55 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.2999999999999994], Pe: [9.0]}
+01:55 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+01:55 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 8 samples ...
+01:55 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 2.881778833430906e-05)
+01:55 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.005781479202626397
+01:56 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.25 9.  ] ...
+01:56 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+01:56 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 4
+01:56 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 0
+01:56 [1mAdaptiveModel[0m: computing output for mu={Da: [2.25], Pe: [9.0]}:
+01:56 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+01:56 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.25], Pe: [9.0]} ...
+01:56 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.0016576721201145479) above tolerance, discarding MLM output!
+01:56 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+01:57 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.25], Pe: [9.0]}
+01:57 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+01:57 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 9 samples ...
+01:57 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 4.9518121983821924e-05)
+01:57 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.005749927100368802
+01:58 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 2.15 10.  ] ...
+01:58 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+01:58 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 5
+01:58 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 0
+01:58 [1mAdaptiveModel[0m: computing output for mu={Da: [2.1499999999999995], Pe: [10.0]}:
+01:58 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+01:58 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.1499999999999995], Pe: [10.0]} ...
+01:58 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.0027766748620271803) above tolerance, discarding MLM output!
+01:58 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+01:59 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.1499999999999995], Pe: [10.0]}
+01:59 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+01:59 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 10 samples ...
+02:00 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 6.408392737964949e-06)
+02:00 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.006536203046872673
+02:00 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.225 9.25 ] ...
+02:00 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:00 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 6
+02:00 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 0
+02:00 [1mAdaptiveModel[0m: computing output for mu={Da: [2.2249999999999996], Pe: [9.25]}:
+02:00 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:00 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.2249999999999996], Pe: [9.25]} ...
+02:00 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.32854925039983296) above tolerance, discarding MLM output!
+02:00 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+02:01 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.2249999999999996], Pe: [9.25]}
+02:01 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+02:01 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 11 samples ...
+02:02 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 3.173877829818606e-05)
+02:02 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.00391676098083704
+02:03 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.175 9.75 ] ...
+02:03 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:03 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 7
+02:03 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 0
+02:03 [1mAdaptiveModel[0m: computing output for mu={Da: [2.175], Pe: [9.75]}:
+02:03 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:03 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.175], Pe: [9.75]} ...
+02:03 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.15439438325910262) above tolerance, discarding MLM output!
+02:03 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+02:04 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.175], Pe: [9.75]}
+02:04 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+02:04 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 12 samples ...
+02:04 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 1.1626373946792578e-05)
+02:04 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.004254892415596505
+02:05 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.2125 9.375 ] ...
+02:05 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:05 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 8
+02:05 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 0
+02:05 [1mAdaptiveModel[0m: computing output for mu={Da: [2.2124999999999995], Pe: [9.375]}:
+02:05 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:05 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.2124999999999995], Pe: [9.375]} ...
+02:05 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.020601647283886824) above tolerance, discarding MLM output!
+02:05 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+02:07 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.2124999999999995], Pe: [9.375]}
+02:07 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+02:07 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 13 samples ...
+02:07 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 2.5064397252704418e-05)
+02:07 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0030017374367875046
+02:08 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.1875 9.625 ] ...
+02:08 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:08 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 9
+02:08 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 0
+02:08 [1mAdaptiveModel[0m: computing output for mu={Da: [2.1875], Pe: [9.625]}:
+02:08 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:08 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.1875], Pe: [9.625]} ...
+02:08 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.006079026646886828) above tolerance, discarding MLM output!
+02:08 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+02:10 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.1875], Pe: [9.625]}
+02:10 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+02:10 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 14 samples ...
+02:11 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 1.5191753445123878e-05)
+02:11 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0031415871925604237
+02:12 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.20625 9.4375 ] ...
+02:12 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:12 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 10
+02:12 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 0
+02:12 [1mAdaptiveModel[0m: computing output for mu={Da: [2.20625], Pe: [9.4375]}:
+02:12 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:12 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.20625], Pe: [9.4375]} ...
+02:12 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 0.0008362250442876063)
+02:12 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0025487465049134645
+02:13 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.19375 9.5625 ] ...
+02:13 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:13 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 10
+02:13 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 1
+02:13 [1mAdaptiveModel[0m: computing output for mu={Da: [2.1937499999999996], Pe: [9.5625]}:
+02:13 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:13 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.1937499999999996], Pe: [9.5625]} ...
+02:13 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 0.000671886624626274)
+02:13 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.002594259846358058
+02:14 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.203125 9.46875 ] ...
+02:14 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:14 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 10
+02:14 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 2
+02:14 [1mAdaptiveModel[0m: computing output for mu={Da: [2.203125], Pe: [9.46875]}:
+02:14 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:14 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.203125], Pe: [9.46875]} ...
+02:14 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.0010421171529823052) above tolerance, discarding MLM output!
+02:14 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+02:16 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.203125], Pe: [9.46875]}
+02:16 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+02:16 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 15 samples ...
+02:16 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 2.0870359899039548e-05)
+02:16 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0023282295879937
+02:17 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.196875 9.53125 ] ...
+02:17 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:17 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 11
+02:17 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 2
+02:17 [1mAdaptiveModel[0m: computing output for mu={Da: [2.1968749999999995], Pe: [9.53125]}:
+02:17 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:17 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.1968749999999995], Pe: [9.53125]} ...
+02:17 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 0.0007068403671209715)
+02:17 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.00232133969484
+02:18 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.1984375 9.515625 ] ...
+02:18 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:18 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 11
+02:18 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 3
+02:18 [1mAdaptiveModel[0m: computing output for mu={Da: [2.1984375], Pe: [9.515625]}:
+02:18 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:18 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.1984375], Pe: [9.515625]} ...
+02:18 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 0.0005691303943405542)
+02:18 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0021847581361852247
+02:19 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.2984375 9.515625 ] ...
+02:19 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:19 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 11
+02:19 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 4
+02:19 [1mAdaptiveModel[0m: computing output for mu={Da: [2.2984375000000004], Pe: [9.515625]}:
+02:19 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:19 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.2984375000000004], Pe: [9.515625]} ...
+02:19 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.002941163110659714) above tolerance, discarding MLM output!
+02:19 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+02:21 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.2984375000000004], Pe: [9.515625]}
+02:21 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+02:21 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 16 samples ...
+02:21 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 1.2290993579698387e-05)
+02:21 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0020480142596283474
+02:22 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.37265625 9.5234375 ] ...
+02:22 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:22 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 12
+02:22 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 4
+02:22 [1mAdaptiveModel[0m: computing output for mu={Da: [2.3726562500000004], Pe: [9.5234375]}:
+02:22 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:22 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.3726562500000004], Pe: [9.5234375]} ...
+02:22 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 0.0004235962427301945)
+02:22 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.00203217252734365
+02:23 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.42421875 9.5078125 ] ...
+02:23 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:23 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 12
+02:23 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 5
+02:23 [1mAdaptiveModel[0m: computing output for mu={Da: [2.4242187500000005], Pe: [9.5078125]}:
+02:23 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:23 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.4242187500000005], Pe: [9.5078125]} ...
+02:23 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.008138389445568574) above tolerance, discarding MLM output!
+02:23 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+02:24 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.4242187500000005], Pe: [9.5078125]}
+02:24 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+02:25 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 17 samples ...
+02:25 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 3.388243991387272e-05)
+02:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0021665383475739184
+02:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.36777344 9.50976562] ...
+02:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 13
+02:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 5
+02:25 [1mAdaptiveModel[0m: computing output for mu={Da: [2.3677734375000004], Pe: [9.509765625]}:
+02:25 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:25 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.3677734375000004], Pe: [9.509765625]} ...
+02:26 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 6.468201434695826e-05)
+02:26 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.00212403385616498
+02:26 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.49042969 9.53320312] ...
+02:26 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:26 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 13
+02:26 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 6
+02:26 [1mAdaptiveModel[0m: computing output for mu={Da: [2.4904296875000007], Pe: [9.533203125]}:
+02:26 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:26 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.4904296875000007], Pe: [9.533203125]} ...
+02:26 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.006714685676079596) above tolerance, discarding MLM output!
+02:26 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+02:28 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.4904296875000007], Pe: [9.533203125]}
+02:28 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+02:28 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 18 samples ...
+02:28 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 4.307651670317947e-05)
+02:28 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.002021739480911857
+02:29 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.61064453 9.54980469] ...
+02:29 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:29 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 14
+02:29 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 6
+02:29 [1mAdaptiveModel[0m: computing output for mu={Da: [2.610644531250001], Pe: [9.5498046875]}:
+02:29 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:29 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.610644531250001], Pe: [9.5498046875]} ...
+02:29 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.00942225245516723) above tolerance, discarding MLM output!
+02:29 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+02:30 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.610644531250001], Pe: [9.5498046875]}
+02:30 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+02:31 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 19 samples ...
+02:31 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 5.460925103683878e-05)
+02:31 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0019662494174716317
+02:32 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.61552734 9.56347656] ...
+02:32 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:32 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 15
+02:32 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 6
+02:32 [1mAdaptiveModel[0m: computing output for mu={Da: [2.615527343750001], Pe: [9.5634765625]}:
+02:32 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:32 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.615527343750001], Pe: [9.5634765625]} ...
+02:32 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 0.0008331564044199456)
+02:32 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0018745331148495303
+02:33 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.7394043  9.59033203] ...
+02:33 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:33 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 15
+02:33 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 7
+02:33 [1mAdaptiveModel[0m: computing output for mu={Da: [2.7394042968750014], Pe: [9.59033203125]}:
+02:33 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:33 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.7394042968750014], Pe: [9.59033203125]} ...
+02:33 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.0031816300087119) above tolerance, discarding MLM output!
+02:33 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+02:34 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.7394042968750014], Pe: [9.59033203125]}
+02:34 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+02:34 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 20 samples ...
+02:34 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 5.764046419625373e-05)
+02:34 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0017467635528061846
+02:35 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[2.97739258 9.61669922] ...
+02:35 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:35 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 16
+02:35 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 7
+02:35 [1mAdaptiveModel[0m: computing output for mu={Da: [2.977392578125002], Pe: [9.61669921875]}:
+02:35 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:35 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [2.977392578125002], Pe: [9.61669921875]} ...
+02:35 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.004034572020438506) above tolerance, discarding MLM output!
+02:35 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+02:36 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [2.977392578125002], Pe: [9.61669921875]}
+02:36 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+02:36 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 21 samples ...
+02:37 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 5.8905157023489784e-05)
+02:37 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0016831597133379287
+02:38 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[3.27976074 9.66333008] ...
+02:38 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:38 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 17
+02:38 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 7
+02:38 [1mAdaptiveModel[0m: computing output for mu={Da: [3.279760742187502], Pe: [9.663330078125]}:
+02:38 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:38 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [3.279760742187502], Pe: [9.663330078125]} ...
+02:38 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.00655444093636208) above tolerance, discarding MLM output!
+02:38 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+02:40 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [3.279760742187502], Pe: [9.663330078125]}
+02:40 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+02:40 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 22 samples ...
+02:40 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 9.851608188193419e-05)
+02:40 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0015101453110263358
+02:41 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[3.40852051 9.70385742] ...
+02:41 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:41 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 18
+02:41 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 7
+02:41 [1mAdaptiveModel[0m: computing output for mu={Da: [3.4085205078125025], Pe: [9.703857421875]}:
+02:41 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:41 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [3.4085205078125025], Pe: [9.703857421875]} ...
+02:41 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.006312632129209708) above tolerance, discarding MLM output!
+02:41 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+02:43 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [3.4085205078125025], Pe: [9.703857421875]}
+02:43 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+02:43 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 23 samples ...
+02:43 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 0.00014422938990063321)
+02:43 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0012893290122324794
+02:44 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[3.8074585  9.78088379] ...
+02:44 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:44 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 19
+02:44 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 7
+02:44 [1mAdaptiveModel[0m: computing output for mu={Da: [3.807458496093753], Pe: [9.7808837890625]}:
+02:44 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:44 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [3.807458496093753], Pe: [9.7808837890625]} ...
+02:44 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.037111733613026554) above tolerance, discarding MLM output!
+02:44 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+02:45 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [3.807458496093753], Pe: [9.7808837890625]}
+02:45 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+02:45 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 24 samples ...
+02:47 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 0.00034676123980890327)
+02:47 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.000950869397155352
+02:48 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[4.34781494 9.85388184] ...
+02:48 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:48 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 20
+02:48 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 7
+02:48 [1mAdaptiveModel[0m: computing output for mu={Da: [4.347814941406254], Pe: [9.8538818359375]}:
+02:48 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:48 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [4.347814941406254], Pe: [9.8538818359375]} ...
+02:48 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.029780795087096627) above tolerance, discarding MLM output!
+02:48 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+02:49 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [4.347814941406254], Pe: [9.8538818359375]}
+02:49 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+02:49 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 25 samples ...
+02:50 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 0.0007365717849664197)
+02:50 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0007191878551502957
+02:51 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[5.15202026 9.98565674] ...
+02:51 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 4
+02:51 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 21
+02:51 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 7
+02:51 [1mAdaptiveModel[0m: computing output for mu={Da: [5.152020263671879], Pe: [9.98565673828125]}:
+02:51 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+02:51 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.152020263671879], Pe: [9.98565673828125]} ...
+02:52 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.11165711858970646) above tolerance, discarding MLM output!
+02:52 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+02:53 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   ROM solution not accurate enough for training (0.0026445105845182794)!
+02:53 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.0015776739462570423) above tolerance, discarding ROM output!
+02:53 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing FOM output (+live solution HAPOD):
+02:58 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   extending ROM ...
+03:32 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   prolonging MLM training data ...
+03:32 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   solving ROM for MLM training ...
+03:34 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [5.152020263671879], Pe: [9.98565673828125]}
+03:34 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+03:34 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 26 samples ...
+03:35 |   [1mAdaptiveModel[0m: returning FOM output!
+03:35 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0003654273577566279
+03:36 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.67971802 10.10321045] ...
+03:36 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+03:36 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 21
+03:36 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 7
+03:36 [1mAdaptiveModel[0m: computing output for mu={Da: [5.67971801757813], Pe: [10.10321044921875]}:
+03:36 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+03:36 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.67971801757813], Pe: [10.10321044921875]} ...
+03:36 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.13892177191217625) above tolerance, discarding MLM output!
+03:36 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+03:37 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [5.67971801757813], Pe: [10.10321044921875]}
+03:37 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+03:37 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 27 samples ...
+03:38 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 5.0574431610709e-05)
+03:38 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0003959911781867241
+03:39 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 7.02427979 10.3079834 ] ...
+03:39 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+03:39 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 22
+03:39 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 7
+03:39 [1mAdaptiveModel[0m: computing output for mu={Da: [7.024279785156256], Pe: [10.3079833984375]}:
+03:39 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+03:39 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [7.024279785156256], Pe: [10.3079833984375]} ...
+03:39 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (1.267855802073555) above tolerance, discarding MLM output!
+03:39 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+03:41 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [7.024279785156256], Pe: [10.3079833984375]}
+03:41 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+03:41 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 28 samples ...
+03:42 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 0.0002942560668533173)
+03:42 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0011839020142721656
+03:43 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[4.61166382 9.91265869] ...
+03:43 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+03:43 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 23
+03:43 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 7
+03:43 [1mAdaptiveModel[0m: computing output for mu={Da: [4.6116638183593786], Pe: [9.91265869140625]}:
+03:43 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+03:43 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [4.6116638183593786], Pe: [9.91265869140625]} ...
+03:44 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.003352269546438606) above tolerance, discarding MLM output!
+03:44 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+03:45 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [4.6116638183593786], Pe: [9.91265869140625]}
+03:45 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+03:45 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 29 samples ...
+03:47 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 2.3835675671142545e-05)
+03:47 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.00042451189135420987
+03:48 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 6.22007446 10.1762085 ] ...
+03:48 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+03:48 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 24
+03:48 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 7
+03:48 [1mAdaptiveModel[0m: computing output for mu={Da: [6.220074462890631], Pe: [10.17620849609375]}:
+03:48 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+03:48 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [6.220074462890631], Pe: [10.17620849609375]} ...
+03:48 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.01269515465535243) above tolerance, discarding MLM output!
+03:48 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+03:49 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [6.220074462890631], Pe: [10.17620849609375]}
+03:49 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+03:49 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 30 samples ...
+03:52 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 0.00012349205579087352)
+03:52 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.000691176597492054
+03:53 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[5.01376648 9.97854614] ...
+03:53 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+03:53 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 25
+03:53 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 7
+03:53 [1mAdaptiveModel[0m: computing output for mu={Da: [5.013766479492192], Pe: [9.978546142578125]}:
+03:53 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+03:53 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.013766479492192], Pe: [9.978546142578125]} ...
+03:53 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.0010193804539590041) above tolerance, discarding MLM output!
+03:53 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+03:54 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [5.013766479492192], Pe: [9.978546142578125]}
+03:54 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+03:54 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 31 samples ...
+03:58 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 7.031714332150094e-06)
+03:58 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.00018960539161856985
+03:58 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[4.48606873 9.86099243] ...
+03:58 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+03:58 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 26
+03:58 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 7
+03:58 [1mAdaptiveModel[0m: computing output for mu={Da: [4.486068725585941], Pe: [9.860992431640625]}:
+03:58 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+03:58 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [4.486068725585941], Pe: [9.860992431640625]} ...
+03:59 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.0012752735857099243) above tolerance, discarding MLM output!
+03:59 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+04:00 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [4.486068725585941], Pe: [9.860992431640625]}
+04:00 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+04:00 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 32 samples ...
+04:03 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 2.8816290556417346e-05)
+04:03 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.0007393669866045758
+04:03 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.38130569 10.04265594] ...
+04:03 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:03 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 27
+04:03 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 7
+04:03 [1mAdaptiveModel[0m: computing output for mu={Da: [5.3813056945800835], Pe: [10.042655944824219]}:
+04:03 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:03 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.3813056945800835], Pe: [10.042655944824219]} ...
+04:04 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.0017272229418391603) above tolerance, discarding MLM output!
+04:04 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+04:05 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [5.3813056945800835], Pe: [10.042655944824219]}
+04:05 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+04:05 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 33 samples ...
+04:08 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 1.9395839720082324e-05)
+04:08 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.00032665580155744403
+04:09 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.24305191 10.03554535] ...
+04:09 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:09 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 28
+04:09 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 7
+04:09 [1mAdaptiveModel[0m: computing output for mu={Da: [5.243051910400396], Pe: [10.035545349121094]}:
+04:09 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:09 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.243051910400396], Pe: [10.035545349121094]} ...
+04:09 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.0021497043816681963) above tolerance, discarding MLM output!
+04:09 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+04:11 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [5.243051910400396], Pe: [10.035545349121094]}
+04:11 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+04:11 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 34 samples ...
+04:15 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 1.0200743579230724e-05)
+04:15 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.00014469290767008675
+04:16 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.28856773 10.06048965] ...
+04:16 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:16 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 29
+04:16 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 7
+04:16 [1mAdaptiveModel[0m: computing output for mu={Da: [5.288567733764655], Pe: [10.060489654541016]}:
+04:16 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:16 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.288567733764655], Pe: [10.060489654541016]} ...
+04:16 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 0.0007348342987400561)
+04:16 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.00027922997983522227
+04:17 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[4.8755127  9.97143555] ...
+04:17 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:17 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 29
+04:17 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 8
+04:17 [1mAdaptiveModel[0m: computing output for mu={Da: [4.875512695312505], Pe: [9.971435546875]}:
+04:17 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:17 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [4.875512695312505], Pe: [9.971435546875]} ...
+04:17 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.0010385753943405306) above tolerance, discarding MLM output!
+04:17 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+04:18 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   collecting state for mu={Da: [4.875512695312505], Pe: [9.971435546875]}
+04:18 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   training MLM ...
+04:18 |   [1mVkogaStateReductor[0m: Fitting VKOGA model to 35 samples ...
+04:21 |   [1mAdaptiveModel[0m: returning ROM output (estimated error: 1.2901872184277003e-05)
+04:21 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.00013856334693461252
+04:22 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[4.6226162  9.93582535] ...
+04:22 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:22 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:22 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 8
+04:22 [1mAdaptiveModel[0m: computing output for mu={Da: [4.622616195678717], Pe: [9.93582534790039]}:
+04:22 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:22 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [4.622616195678717], Pe: [9.93582534790039]} ...
+04:23 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 0.0002728066785927134)
+04:23 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.00025922139036633693
+04:23 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.10479813 10.02843475] ...
+04:23 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:23 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:23 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 9
+04:23 [1mAdaptiveModel[0m: computing output for mu={Da: [5.104798126220709], Pe: [10.028434753417969]}:
+04:23 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:24 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.104798126220709], Pe: [10.028434753417969]} ...
+04:24 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 0.00016708079746362723)
+04:24 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.00015431750262430086
+04:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.08204021 10.0159626 ] ...
+04:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 10
+04:25 [1mAdaptiveModel[0m: computing output for mu={Da: [5.08204021453858], Pe: [10.015962600708008]}:
+04:25 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:25 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.08204021453858], Pe: [10.015962600708008]} ...
+04:25 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.8223108100994e-05)
+04:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 7.36166560600434e-05
+04:26 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[4.714501  9.9518528] ...
+04:26 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:26 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:26 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 11
+04:26 [1mAdaptiveModel[0m: computing output for mu={Da: [4.714500999450689], Pe: [9.951852798461914]}:
+04:26 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:26 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [4.714500999450689], Pe: [9.951852798461914]} ...
+04:26 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 0.0001559219234712506)
+04:26 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.00019351359333819734
+04:27 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.11091418 10.01462221] ...
+04:27 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:27 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:27 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 12
+04:27 [1mAdaptiveModel[0m: computing output for mu={Da: [5.110914182662969], Pe: [10.014622211456299]}:
+04:27 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:27 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.110914182662969], Pe: [10.014622211456299]} ...
+04:27 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 7.352222449293498e-05)
+04:27 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 7.570692437884607e-05
+04:28 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.3174417  10.05914927] ...
+04:28 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:28 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:28 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 13
+04:28 [1mAdaptiveModel[0m: computing output for mu={Da: [5.317441701889045], Pe: [10.059149265289307]}:
+04:28 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:28 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.317441701889045], Pe: [10.059149265289307]} ...
+04:28 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 0.00020249771855578898)
+04:28 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.00026342950478429154
+04:29 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[4.98599495 9.99336398] ...
+04:29 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:29 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:29 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 14
+04:29 [1mAdaptiveModel[0m: computing output for mu={Da: [4.98599494695664], Pe: [9.993363976478577]}:
+04:29 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:29 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [4.98599494695664], Pe: [9.993363976478577]} ...
+04:29 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 7.121044383817096e-05)
+04:29 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 4.029587095515097e-05
+04:30 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[4.95712098 9.99470437] ...
+04:30 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:30 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:30 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 15
+04:30 [1mAdaptiveModel[0m: computing output for mu={Da: [4.9571209788322514], Pe: [9.994704365730286]}:
+04:30 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:30 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [4.9571209788322514], Pe: [9.994704365730286]} ...
+04:30 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.12215594620863e-05)
+04:30 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 4.293757621684838e-05
+04:31 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[4.86107571 9.97210574] ...
+04:31 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:31 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:31 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 16
+04:31 [1mAdaptiveModel[0m: computing output for mu={Da: [4.861075711250312], Pe: [9.972105741500854]}:
+04:31 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:31 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [4.861075711250312], Pe: [9.972105741500854]} ...
+04:31 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 1.5762603006546798e-05)
+04:31 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 0.00012560224370199678
+04:32 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.02679909 10.00499839] ...
+04:32 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:32 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:32 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 17
+04:32 [1mAdaptiveModel[0m: computing output for mu={Da: [5.026799088716513], Pe: [10.00499838590622]}:
+04:32 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:32 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.026799088716513], Pe: [10.00499838590622]} ...
+04:33 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.80156532767217e-05)
+04:33 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 2.3492667783821253e-05
+04:33 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.05567306 10.003658  ] ...
+04:33 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:33 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:33 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 18
+04:33 [1mAdaptiveModel[0m: computing output for mu={Da: [5.055673056840901], Pe: [10.00365799665451]}:
+04:33 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:33 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.055673056840901], Pe: [10.00365799665451]} ...
+04:34 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 7.827030593996915e-05)
+04:34 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 6.253347868470649e-05
+04:35 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[4.981759   9.99694277] ...
+04:35 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:35 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:35 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 19
+04:35 [1mAdaptiveModel[0m: computing output for mu={Da: [4.9817589983344135], Pe: [9.996942773461342]}:
+04:35 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:35 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [4.9817589983344135], Pe: [9.996942773461342]} ...
+04:35 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 8.892975773109498e-05)
+04:35 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 1.6371386650809727e-05
+04:36 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.02256314 10.00857718] ...
+04:36 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:36 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:36 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 20
+04:36 [1mAdaptiveModel[0m: computing output for mu={Da: [5.022563140094285], Pe: [10.008577182888985]}:
+04:36 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:36 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.022563140094285], Pe: [10.008577182888985]} ...
+04:36 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 0.00012043886459316387)
+04:36 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 5.445037000239433e-05
+04:37 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[4.995137   9.99716728] ...
+04:37 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:37 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:37 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 21
+04:37 [1mAdaptiveModel[0m: computing output for mu={Da: [4.995136995241051], Pe: [9.997167278081179]}:
+04:37 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:37 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [4.995136995241051], Pe: [9.997167278081179]} ...
+04:37 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 8.298477460076182e-05)
+04:37 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 1.670136503434047e-05
+04:38 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[4.9500969  9.98911167] ...
+04:38 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:38 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:38 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 22
+04:38 [1mAdaptiveModel[0m: computing output for mu={Da: [4.950096904858952], Pe: [9.989111665636301]}:
+04:38 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:38 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [4.950096904858952], Pe: [9.989111665636301]} ...
+04:38 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 6.536961175234079e-05)
+04:38 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 5.0556526897942156e-05
+04:39 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00762354 10.00102671] ...
+04:39 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:39 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:39 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 23
+04:39 [1mAdaptiveModel[0m: computing output for mu={Da: [5.007623542752123], Pe: [10.00102670583874]}:
+04:39 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:39 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.007623542752123], Pe: [10.00102670583874]} ...
+04:39 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.3049281504222e-05)
+04:39 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 5.043187736284566e-06
+04:41 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 4.99424555 10.0008022 ] ...
+04:41 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:41 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:41 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 24
+04:41 [1mAdaptiveModel[0m: computing output for mu={Da: [4.9942455458454855], Pe: [10.000802201218903]}:
+04:41 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:41 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [4.9942455458454855], Pe: [10.000802201218903]} ...
+04:41 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 0.00010081610943326267)
+04:41 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 2.3524022418622975e-05
+04:42 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[4.99491413 9.99807601] ...
+04:42 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:42 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:42 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 25
+04:42 [1mAdaptiveModel[0m: computing output for mu={Da: [4.994914132892159], Pe: [9.99807600886561]}:
+04:42 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:42 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [4.994914132892159], Pe: [9.99807600886561]} ...
+04:42 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 8.707374644599171e-05)
+04:42 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 9.693442320803103e-06
+04:43 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.02077868 10.00215994] ...
+04:43 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:43 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:43 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 26
+04:43 [1mAdaptiveModel[0m: computing output for mu={Da: [5.020778677309869], Pe: [10.002159941243008]}:
+04:43 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:43 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.020778677309869], Pe: [10.002159941243008]} ...
+04:43 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.002460115932874e-05)
+04:43 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 1.2785253840512378e-05
+04:44 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.01102376 10.00085565] ...
+04:44 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:44 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:44 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 27
+04:44 [1mAdaptiveModel[0m: computing output for mu={Da: [5.011023757566004], Pe: [10.000855649297591]}:
+04:44 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:44 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.011023757566004], Pe: [10.000855649297591]} ...
+04:44 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.02782583546691e-05)
+04:44 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 5.529891507503881e-06
+04:45 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.02373317 10.00380635] ...
+04:45 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:45 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:45 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 28
+04:45 [1mAdaptiveModel[0m: computing output for mu={Da: [5.023733167425968], Pe: [10.003806346270721]}:
+04:45 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:45 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.023733167425968], Pe: [10.003806346270721]} ...
+04:45 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.496560287648945e-05)
+04:45 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 1.6426935455123026e-05
+04:46 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[5.00211889 9.99950859] ...
+04:46 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:46 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:46 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 29
+04:46 [1mAdaptiveModel[0m: computing output for mu={Da: [5.002118891525612], Pe: [9.999508593216888]}:
+04:46 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:46 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.002118891525612], Pe: [9.999508593216888]} ...
+04:46 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 8.951076685459597e-05)
+04:46 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 3.1717701345270605e-06
+04:48 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[4.99871868 9.99967965] ...
+04:48 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:48 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:48 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 30
+04:48 [1mAdaptiveModel[0m: computing output for mu={Da: [4.99871867671173], Pe: [9.999679649758036]}:
+04:48 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:48 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [4.99871867671173], Pe: [9.999679649758036]} ...
+04:48 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.227281771600182e-05)
+04:48 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 7.196780113644802e-06
+04:49 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00794749 10.00056165] ...
+04:49 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:49 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:49 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 31
+04:49 [1mAdaptiveModel[0m: computing output for mu={Da: [5.0079474873524354], Pe: [10.000561649412703]}:
+04:49 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:49 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.0079474873524354], Pe: [10.000561649412703]} ...
+04:49 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.079597155288563e-05)
+04:49 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 2.3513224183049908e-06
+04:50 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[5.00244284 9.99904354] ...
+04:50 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:50 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:50 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 32
+04:50 [1mAdaptiveModel[0m: computing output for mu={Da: [5.002442836125924], Pe: [9.99904353679085]}:
+04:50 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:50 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.002442836125924], Pe: [9.99904353679085]} ...
+04:50 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 8.73026896658994e-05)
+04:50 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 7.0058439490608415e-06
+04:51 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00632837 10.00053091] ...
+04:51 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:51 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:51 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 33
+04:51 [1mAdaptiveModel[0m: computing output for mu={Da: [5.006328366095573], Pe: [10.000530913576767]}:
+04:51 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:51 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.006328366095573], Pe: [10.000530913576767]} ...
+04:51 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.161308556725824e-05)
+04:51 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 2.0385456790047995e-06
+04:52 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.01215696 10.00158397] ...
+04:52 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:52 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:53 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 34
+04:53 [1mAdaptiveModel[0m: computing output for mu={Da: [5.012156961922397], Pe: [10.001583969772582]}:
+04:53 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:53 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.012156961922397], Pe: [10.001583969772582]} ...
+04:53 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.274089620173391e-05)
+04:53 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 6.503930251530038e-06
+04:54 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00462841 10.00002744] ...
+04:54 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:54 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:54 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 35
+04:54 [1mAdaptiveModel[0m: computing output for mu={Da: [5.004628409124808], Pe: [10.000027437355811]}:
+04:54 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:54 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.004628409124808], Pe: [10.000027437355811]} ...
+04:54 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.037572795114506e-05)
+04:54 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 7.543973579490076e-07
+04:55 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[5.00300929 9.9999967 ] ...
+04:55 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:55 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:55 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 36
+04:55 [1mAdaptiveModel[0m: computing output for mu={Da: [5.003009287867947], Pe: [9.999996701519876]}:
+04:55 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:55 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.003009287867947], Pe: [9.999996701519876]} ...
+04:55 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.118049281815765e-05)
+04:55 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 2.0532585276733517e-06
+04:56 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00424384 10.00013794] ...
+04:56 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:56 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:56 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 37
+04:56 [1mAdaptiveModel[0m: computing output for mu={Da: [5.004243837739069], Pe: [10.000137938493083]}:
+04:56 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:56 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.004243837739069], Pe: [10.000137938493083]} ...
+04:56 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.109034458949456e-05)
+04:56 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 9.516107329597678e-07
+04:58 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[5.00254388 9.99963446] ...
+04:58 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:58 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:58 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 38
+04:58 [1mAdaptiveModel[0m: computing output for mu={Da: [5.002543880768304], Pe: [9.999634462272127]}:
+04:58 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:58 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.002543880768304], Pe: [9.999634462272127]} ...
+04:58 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 8.982847490978214e-05)
+04:58 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 2.487379519147681e-06
+04:59 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00538224 10.0003068 ] ...
+04:59 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+04:59 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+04:59 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 39
+04:59 [1mAdaptiveModel[0m: computing output for mu={Da: [5.005382244763756], Pe: [10.000306800750607]}:
+04:59 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+04:59 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.005382244763756], Pe: [10.000306800750607]} ...
+04:59 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.11751713570097e-05)
+04:59 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 9.297707117758569e-07
+05:00 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00576682 10.0001963 ] ...
+05:00 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:00 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:00 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 40
+05:00 [1mAdaptiveModel[0m: computing output for mu={Da: [5.005766816149495], Pe: [10.000196299613336]}:
+05:00 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:00 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.005766816149495], Pe: [10.000196299613336]} ...
+05:00 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.046281400424318e-05)
+05:00 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 1.2819786319416548e-06
+05:01 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00462458 10.00015253] ...
+05:01 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:01 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:01 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 41
+05:01 [1mAdaptiveModel[0m: computing output for mu={Da: [5.004624582341675], Pe: [10.000152528773146]}:
+05:01 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:01 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.004624582341675], Pe: [10.000152528773146]} ...
+05:02 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.093267792119763e-05)
+05:02 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 5.130193208778512e-07
+05:03 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[5.00387075 9.99987317] ...
+05:03 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:03 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:03 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 42
+05:03 [1mAdaptiveModel[0m: computing output for mu={Da: [5.003870746702726], Pe: [9.99987316537835]}:
+05:03 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:03 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.003870746702726], Pe: [9.99987316537835]} ...
+05:03 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.012911205090174e-05)
+05:03 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 1.4664847894172578e-06
+05:04 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00500437 10.00019839] ...
+05:04 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:04 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:04 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 43
+05:04 [1mAdaptiveModel[0m: computing output for mu={Da: [5.005004370248498], Pe: [10.000198391907542]}:
+05:04 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:04 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.005004370248498], Pe: [10.000198391907542]} ...
+05:04 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.091480946251575e-05)
+05:04 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 4.895894982126156e-07
+05:05 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00500054 10.00032348] ...
+05:05 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:05 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:05 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 44
+05:05 [1mAdaptiveModel[0m: computing output for mu={Da: [5.005000543465365], Pe: [10.000323483324877]}:
+05:05 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:05 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.005000543465365], Pe: [10.000323483324877]} ...
+05:06 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.147460541969936e-05)
+05:06 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 1.3763572121738843e-06
+05:07 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00472144 10.00010145] ...
+05:07 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:07 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:07 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 45
+05:07 [1mAdaptiveModel[0m: computing output for mu={Da: [5.004721442709947], Pe: [10.000101448848078]}:
+05:07 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:07 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.004721442709947], Pe: [10.000101448848078]} ...
+05:07 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.06494634977349e-05)
+05:07 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 5.593983769401796e-07
+05:08 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00490751 10.00024947] ...
+05:08 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:08 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:08 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 46
+05:08 [1mAdaptiveModel[0m: computing output for mu={Da: [5.004907509880226], Pe: [10.00024947183261]}:
+05:08 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:08 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.004907509880226], Pe: [10.00024947183261]} ...
+05:08 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.119884876049577e-05)
+05:08 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 8.475501175470024e-07
+05:10 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00476796 10.00013845] ...
+05:10 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:10 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:10 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 47
+05:10 [1mAdaptiveModel[0m: computing output for mu={Da: [5.004767959502517], Pe: [10.000138454594211]}:
+05:10 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:10 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.004767959502517], Pe: [10.000138454594211]} ...
+05:10 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.078653478290807e-05)
+05:10 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 5.249134031879484e-07
+05:11 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00486099 10.00021247] ...
+05:11 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:11 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:11 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 48
+05:11 [1mAdaptiveModel[0m: computing output for mu={Da: [5.004860993087656], Pe: [10.000212466086477]}:
+05:11 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:11 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.004860993087656], Pe: [10.000212466086477]} ...
+05:11 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.106126140345635e-05)
+05:11 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 5.833059768499405e-07
+05:12 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00479122 10.00015696] ...
+05:12 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:12 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:12 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 49
+05:12 [1mAdaptiveModel[0m: computing output for mu={Da: [5.004791217898802], Pe: [10.000156957467278]}:
+05:12 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:12 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.004791217898802], Pe: [10.000156957467278]} ...
+05:12 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.085518659632701e-05)
+05:12 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 5.118475428354157e-07
+05:14 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00517101 10.00020282] ...
+05:14 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:14 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:14 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 50
+05:14 [1mAdaptiveModel[0m: computing output for mu={Da: [5.005171005805625], Pe: [10.000202820601675]}:
+05:14 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:14 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.005171005805625], Pe: [10.000202820601675]} ...
+05:14 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.08372994834095e-05)
+05:14 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 4.88438154731775e-07
+05:15 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00544422 10.00022797] ...
+05:15 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:15 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:15 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 51
+05:15 [1mAdaptiveModel[0m: computing output for mu={Da: [5.005444217537601], Pe: [10.00022796651594]}:
+05:15 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:15 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.005444217537601], Pe: [10.00022796651594]} ...
+05:15 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.078948947896478e-05)
+05:15 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 4.779948616480617e-07
+05:16 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00565737 10.0002694 ] ...
+05:16 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:16 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:16 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 52
+05:16 [1mAdaptiveModel[0m: computing output for mu={Da: [5.005657369887297], Pe: [10.000269400956205]}:
+05:16 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:16 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.005657369887297], Pe: [10.000269400956205]} ...
+05:16 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.08484436407681e-05)
+05:16 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 5.37813663777087e-07
+05:18 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00500776 10.00018507] ...
+05:18 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:18 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:18 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 53
+05:18 [1mAdaptiveModel[0m: computing output for mu={Da: [5.005007755895926], Pe: [10.000185068339508]}:
+05:18 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:18 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.005007755895926], Pe: [10.000185068339508]} ...
+05:18 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.085374049220357e-05)
+05:18 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 4.966593735217153e-07
+05:19 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00544083 10.00024129] ...
+05:19 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:19 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:19 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 54
+05:19 [1mAdaptiveModel[0m: computing output for mu={Da: [5.005440831890173], Pe: [10.000241290083974]}:
+05:19 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:19 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.005440831890173], Pe: [10.000241290083974]} ...
+05:19 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.085029935884036e-05)
+05:19 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 4.723624014269607e-07
+05:20 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00565737 10.0002694 ] ...
+05:20 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:20 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:20 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 55
+05:20 [1mAdaptiveModel[0m: computing output for mu={Da: [5.005657369887295], Pe: [10.000269400956206]}:
+05:20 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:20 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.005657369887295], Pe: [10.000269400956206]} ...
+05:21 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.084844062341355e-05)
+05:21 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 5.378144237629112e-07
+05:22 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00588068 10.00027086] ...
+05:22 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:22 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:22 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 56
+05:22 [1mAdaptiveModel[0m: computing output for mu={Da: [5.005880679179276], Pe: [10.000270864692371]}:
+05:22 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:22 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.005880679179276], Pe: [10.000270864692371]} ...
+05:22 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.072491342403156e-05)
+05:22 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 9.188352394703947e-07
+05:23 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00522345 10.00021651] ...
+05:23 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:23 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:23 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 57
+05:23 [1mAdaptiveModel[0m: computing output for mu={Da: [5.0052234474811925], Pe: [10.00021651010375]}:
+05:23 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:23 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.0052234474811925], Pe: [10.00021651010375]} ...
+05:23 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.086740422009038e-05)
+05:23 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 4.81994658382552e-07
+05:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.0056616  10.00025275] ...
+05:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 58
+05:25 [1mAdaptiveModel[0m: computing output for mu={Da: [5.005661601946581], Pe: [10.000252746496164]}:
+05:25 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:25 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.005661601946581], Pe: [10.000252746496164]} ...
+05:25 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.077245747308597e-05)
+05:25 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 6.710035407413162e-07
+05:26 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00533299 10.00022557] ...
+05:26 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:26 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:26 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 59
+05:26 [1mAdaptiveModel[0m: computing output for mu={Da: [5.00533298609754], Pe: [10.000225569201852]}:
+05:26 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:26 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.00533298609754], Pe: [10.000225569201852]} ...
+05:26 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.084365349247152e-05)
+05:26 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 4.785046766055102e-07
+05:27 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00555206 10.00024369] ...
+05:27 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:27 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:27 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 60
+05:27 [1mAdaptiveModel[0m: computing output for mu={Da: [5.005552063330234], Pe: [10.000243687398061]}:
+05:27 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:27 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.005552063330234], Pe: [10.000243687398061]} ...
+05:27 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.079615648333774e-05)
+05:27 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 5.47082916753372e-07
+05:29 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: evaluating model for mu=[ 5.00538776 10.0002301 ] ...
+05:29 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used FOM evals: 5
+05:29 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used ROM evals: 30
+05:29 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: - used MLM evals: 61
+05:29 [1mAdaptiveModel[0m: computing output for mu={Da: [5.005387755405714], Pe: [10.000230098750905]}:
+05:29 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+05:29 |   [1mVkogaStateModel[0m: Solving instationary_Spe10ChannelProblem_DuneGDT_P1_CG_reduced_vkoga_reduced for {Da: [5.005387755405714], Pe: [10.000230098750905]} ...
+05:29 |   [1mAdaptiveModel[0m: returning MLM output (estimated error: 9.0831803103364e-05)
+05:29 [1;34m|DEBUG|[0m[1mNelder-Mead[0m: ... objective is 4.768429928760391e-07
+05:32 [1mNelder-Mead[0m:  succeded!
+05:32 [1mNelder-Mead[0m:   minimizer:       {Da: [5.005440831890173], Pe: [10.000241290083974]}
+05:32 [1mNelder-Mead[0m:   objective value: 4.723624014269607e-07
+05:32 [1mNelder-Mead[0m:  These are the results:
+05:32 [1mNelder-Mead[0m: 
+ final_simplex: (array([[ 5.00544083, 10.00024129],
+       [ 5.00538776, 10.0002301 ],
+       [ 5.00544422, 10.00022797]]), array([4.72362401e-07, 4.76842993e-07, 4.77994862e-07]))
+           fun: 4.723624014269607e-07
+       message: 'Optimization terminated successfully.'
+          nfev: 97
+           nit: 49
+        status: 0
+       success: True
+             x: array([ 5.00544083, 10.00024129])
+05:33 [1mmain[0m: writing results to KLAIM21__RBMLROM_minimization__run/KLAIM21__RBMLROM_minimization__run_0_1000_VKOGA_1_0.001.pickle ...
+05:33 [1mmain[0m: Number of solves using the different models:
+05:33 [1mmain[0m: FOM: 5
+05:33 [1mmain[0m: ROM: 30
+05:33 [1mmain[0m: MLM: 62

@@ -1,0 +1,24 @@
+00:00 [1mmain[0m: creating FOM:
+00:08 [1mmain[0m:   discretizing took 8.009996138000133s
+00:08 [1mmain[0m:   FOM has 80798 DoFs, uses 100 time steps
+00:08 [1mmain[0m:   input parameter space is 28-dimensional:
+00:08 [1mmain[0m:     ParameterSpace({doors: 8, heaters: 12, walls: 8}, {doors: (0.01, 0.1), heaters: (0, 100), walls: (0.0025, 0.1)})
+00:08 [1mmain[0m: computing dual norm of output functional:
+00:13 [1mmain[0m:   0.626588875474348
+00:14 [1mmain[0m: creating adaptive ANN model (for abs_output_tol=0.05) with
+00:14 [1mmain[0m: - abs_output_tol=0.05
+00:14 [1mmain[0m: - abs_state_tol=0.0797971396510166
+00:14 [1mmain[0m: - pod_l2_tol=1e-15
+00:16 [1mANNStateReductor[0m: Using input scaling ...
+00:16 [1mmain[0m: took 1.2198928500001784s
+00:18 [1madaptive_monte_carlo[0m: evaluating model ...
+00:18 [1madaptive_monte_carlo[0m: - used FOM evals: 0
+00:18 [1madaptive_monte_carlo[0m: - used ROM evals: 0
+00:18 [1madaptive_monte_carlo[0m: - used MLM evals: 0
+00:18 [1mAdaptiveModel[0m: computing output for mu={doors: [0.04370861069626263, 0.09556428757689246, 0.07587945476302646, 0.0638792635777333, 0.02404167763981929, 0.02403950683025824, 0.015227525095137952, 0.08795585311974417], heaters: [60.11150117432088, 70.80725777960456, 2.0584494295802447, 96.99098521619943, 83.24426408004217, 21.233911067827616, 18.182496720710063, 18.34045098534338, 30.42422429595377, 52.475643163223786, 43.194501864211574, 29.122914019804192], walls: [0.062155657235432, 0.01610065141357408, 0.03098410323218377, 0.038220279721134946, 0.04696682346116101, 0.07905465623581884, 0.021968193760440072, 0.052637857745327137]}:
+00:18 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing MLM output:
+00:18 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.28847451870725677) above tolerance, discarding MLM output!
+00:18 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing ROM output:
+00:19 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   ROM solution not accurate enough for training (0.4603888291008553)!
+00:19 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m:   estimated error (0.28847451870725677) above tolerance, discarding ROM output!
+00:19 |   [1;34m|DEBUG|[0m[1mAdaptiveModel[0m: computing FOM output (+live solution HAPOD):

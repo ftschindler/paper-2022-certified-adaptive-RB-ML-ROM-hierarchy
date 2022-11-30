@@ -1,0 +1,52 @@
+jobs:
+- job: 'OSX_CI'
+  pool:
+    vmImage: macOS-10.15
+  timeoutInMinutes: 30
+  strategy:
+    maxParallel: 8
+    matrix:
+      osx_python3.6:
+        CONFIG: osx_python3.6
+        UPLOAD_PACKAGES: False
+      osx_python3.7:
+        CONFIG: osx_python3.7
+        UPLOAD_PACKAGES: False
+
+  steps:
+  - script: |
+      echo "Removing homebrew from Azure to avoid conflicts."
+      curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall > ~/uninstall_homebrew
+      chmod +x ~/uninstall_homebrew
+      ~/uninstall_homebrew -fq
+      rm ~/uninstall_homebrew
+    displayName: Remove homebrew
+
+  - bash: echo "##vso[task.prependpath]$CONDA/bin"
+    displayName: Add conda to PATH
+
+  - bash: sudo chown -R $USER $CONDA
+    displayName: Take ownership of conda installation
+
+  - bash: |
+      set -x -e
+      conda config --add channels conda-forge
+      conda update -y --all
+      conda install -y --only-deps pymor
+      # these ones are not in the 0.5.1 conda build yet
+      conda install -y pyevtk mpi4py
+      # these are buildtime, not a runtime,  deps for our conda package
+      conda install -y cython pytest-cov pytest
+      # install anything which might a new dependency with pip
+      pip install -r requirements.txt
+      pip install -r requirements-ci.txt
+      pip install pytest-azurepipelines
+      conda list
+    displayName: Configure conda and conda-build
+
+  - script: |
+      set -ex
+      export PYTHONPATH=${PWD}/src:${PYTHONPATH}
+      python setup.py build_ext -i
+      py.test -r sxX -k "demos"
+    displayName: py.test

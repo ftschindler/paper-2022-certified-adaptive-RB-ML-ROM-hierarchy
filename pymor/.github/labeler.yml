@@ -1,0 +1,17 @@
+infrastructure:
+  - .ci/*
+  - .github/*
+  - .binder/*
+  - Makefile
+  - azure-pipelines.yml
+  - requirements*
+  - pyproject.toml
+  - MANIFEST.in
+  - dependencies.py
+  - setup.*
+  - versioneer.py
+
+management:
+  - CONTRIBUTING.md
+  - LICENSE.txt
+
