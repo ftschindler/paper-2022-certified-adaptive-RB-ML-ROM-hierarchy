@@ -1,10 +1,13 @@
 A new certified hierarchical and adaptive RB-ML-ROM surrogate model for parametrized PDEs
 =========================================================================================
 
-This repository contains the supplementary material for the publication
+This repository contains the supplementary material for [the publication](https://doi.org/10.1137/22M1493318
+)
 ```
 A new certified hierarchical and adaptive RB-ML-ROM surrogate model for parametrized PDEs (2022)
 B. Haasdonk, H. Kleikamp, M. Ohlberger, F. Schindler, T. Wenzel
+SIAM Journal on Scientific Computing, Volume 45(3), A1039 - A1065, 2023
+https://doi.org/10.1137/22M1493318
 ```
 
 It was used to carry out the numerical experiments and generate the figures for the publication.
